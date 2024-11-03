@@ -1,7 +1,9 @@
 name: Build job
 
 on:
-  workflow_call:
+  push:
+    branches:
+      - main # 只在master上push触发部署
 
 env:
   POWERSHELL_TELEMETRY_OPTOUT: 1
